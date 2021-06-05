@@ -32,14 +32,17 @@ def process_results(new_list):
     """Process"""
     news_results=[]
     for news_items in new_list:
-        id=news_items.get('id')
-        name= news_items.get('name')
-        desciption= news_items.get('desciption')
+        source = news_items.get('source')
+        title = news_items.get('title')
+        description= news_items.get('description')
+        image = news_items.get('urlToImage')
+        time = news_items.get('publishedAt')
+        link = news_items.get('url')
 
-        if desciption:
-            news_object=Newsource(id, desciption, category)
+        if title:
+            news_object=Newsource(source, title, description, image,time,link)
             news_results.append(news_object)
-    print(news_results)
+    # print(news_results)
     return news_results
     
 

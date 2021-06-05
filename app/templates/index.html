@@ -3,15 +3,29 @@
 {%block content%}
 <div class="container">
 
+   <div class="container-fluid">
     <h2>welcome to Flask application</h2>
     <h3> News preview </h3>
+   </div>
     <hr>
+    <!-- <p>{{sources}}</p> -->
 
     <h3>News source</h3>
     <ul>
 
-        {%for new_source in everything%}
-        <li>new_source.description</li>
+        {%for new_source in sources%}
+        <li class="">           
+            <div class="card ">
+                <div class="card-body">
+                  <h5 class="card-title">{{new_source.title}}</h5>
+                  <h6>Published at:<span class="text-warning">{{new_source.time}}</span> </h6>
+                  <p class="card-text">{{new_source.description}}</p>
+                  <a href="{{new_source.link}}" class="btn btn-primary">Checkout</a>
+                </div>
+              </div>   
+              <hr> 
+            
+        </li>
         {%endfor%}
     </ul>
 
