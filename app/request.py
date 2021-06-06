@@ -32,7 +32,7 @@ def process_results(new_list):
     """Process"""
     news_results=[]
     for news_items in new_list:
-        source = news_items.get('source')
+        source = news_items.get("source['name']")
         title = news_items.get('title')
         description= news_items.get('description')
         image = news_items.get('urlToImage')
