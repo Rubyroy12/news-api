@@ -11,3 +11,12 @@ def index():
     news_sources = get_news("everything")
 
     return render_template('index.html', name = name, sources=news_sources)
+
+@main.route('/articles')
+def articles():
+    """return"""
+    news_sources = get_news("sources")
+    
+    return render_template('article.html', name = name, sources=news_sources)
+
+
