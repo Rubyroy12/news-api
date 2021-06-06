@@ -9,3 +9,10 @@ class Newsource:
         self.image = image
         self.time = time
         self.link = link
+
+class Article:
+    """article"""
+    def __init__(self,name,description,url):
+        self.name = name
+        self.description = description
+        self.url = url

@@ -11,12 +11,8 @@ body{
 
 }
 
-.card{
-
-    display: flex;
-    flex-direction:row;
-    justify-content: between;
-    
-
-    
+.source{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
 }
