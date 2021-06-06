@@ -12,7 +12,7 @@ def index():
 
     return render_template('index.html', name = name, sources=news_sources)
 
-@main.route('/articles')
+@main.route('/tesla')
 def articles():
     """return"""
     news_sources = get_news("sources")

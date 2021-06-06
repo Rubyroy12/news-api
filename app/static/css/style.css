@@ -10,3 +10,13 @@ body{
 
 
 }
+
+.card{
+
+    display: flex;
+    flex-direction:row;
+    justify-content: between;
+    
+
+    
+}
