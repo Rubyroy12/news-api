@@ -1,6 +1,5 @@
 import unittest
 from app.models import Newsource
-Newsource = newsource.Newsource
 
 class New_source_Test(unittest.TestCase):
     """Test method to test the behaviour of Newsource class"""
@@ -11,6 +10,6 @@ class New_source_Test(unittest.TestCase):
     def test_instance_(self):
         """Test"""
 
-        self.assertTrue(isinstance(self.new_source,Movie))
+        self.assertTrue(isinstance(self.new_source,Newsource))
 
 
