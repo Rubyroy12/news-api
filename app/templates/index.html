@@ -18,7 +18,7 @@
   <h3>News sources</h3>
 
 
-  <div class="card  ">
+  
     {%for new_source in sources%}
     <div class="card col-xs-12 col-sm-4 col-md-2 col-lg-2" style="width: 25rem; box-shadow: 1px 1px 5px 5px #888888;">
       <img class="card-img-top" src="{{new_source.image}}" alt="Card image cap" width="240px" height="200px">
@@ -31,7 +31,24 @@
 
 
     {%endfor%}
-  </div>
+    <hr>
+    
+    <h2>Top headlines news</h2>
+
+    {%for result in feeds%}
+    <div class="card col-xs-12 col-sm-4 col-md-2 col-lg-2" style="width: 25rem; box-shadow: 1px 1px 5px 5px #888888;">
+      <img class="card-img-top" src="{{result.image}}" alt="Card image cap" width="240px" height="200px">
+      <div class="card-body" style="padding:10px">
+        <h5 class="card-title">{{result.title}}</h5>
+        <p class="card-text">Published at:{{result.time}}</p>
+        <a href="{{result.link}}" class="btn btn-primary">Read from source </a>
+      </div>
+    </div>
+
+
+    {%endfor%}
+  
+
 
   <div class="row">
     <div class="col-md-12 d d-flex justify-content-center">
