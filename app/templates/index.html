@@ -1,45 +1,49 @@
 {% extends'base.html'%}
 
 {%block styles %}
-        {{ super()}}
-        <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+{{ super()}}
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
 
-    {%endblock %}
+{%endblock %}
 
 {%block content%}
 <div class="container">
 
-   <div class="container-fluid">
+  <div class="container-fluid">
     <h2>Welcome, We get you updated.</h2>
-   </div>
-    <hr>
-    <!-- <p>{{sources}}</p> -->
+  </div>
+  <hr>
+  <!-- <p>{{sources}}</p> -->
 
-    <h3>News sources</h3>
-    
-    
-        <div class="card  ">
-          {%for new_source in sources%}
-          <div class="card col-xs-12 col-sm-4 col-md-2 col-lg-2" style="width: 25rem; box-shadow: 1px 1px 5px 5px #888888;">
-            <img class="card-img-top" src="{{new_source.image}}" alt="Card image cap" width="240px" height="200px">
-            <div class="card-body" style="padding:10px">
-              <h5 class="card-title">{{new_source.title}}</h5>
-              <p class="card-text">Published at:{{new_source.time}}</p>
-              <a href="{{new_source.link}}" class="btn btn-primary">Read from source </a>
-            </div>
-          </div>  
-                              
-        
-         {%endfor%}
+  <h3>News sources</h3>
+
+
+  <div class="card  ">
+    {%for new_source in sources%}
+    <div class="card col-xs-12 col-sm-4 col-md-2 col-lg-2" style="width: 25rem; box-shadow: 1px 1px 5px 5px #888888;">
+      <img class="card-img-top" src="{{new_source.image}}" alt="Card image cap" width="240px" height="200px">
+      <div class="card-body" style="padding:10px">
+        <h5 class="card-title">{{new_source.title}}</h5>
+        <p class="card-text">Published at:{{new_source.time}}</p>
+        <a href="{{new_source.link}}" class="btn btn-primary">Read from source </a>
+      </div>
+    </div>
+
+
+    {%endfor%}
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 d d-flex justify-content-center">
+      <div class="card-footer">
+        <p>Copyright &copy; 2021 <a href="https://newsapi.org/">NEWSAPI</a></p>
+
       </div>
 
-      <div class="row">
-        <div class="card-footer">
-          <p>Copyright &copy; 2021 <a href="https://newsapi.org/">NEWSAPI</a></p>
-          
-        </div> 
-      </div>
-  
+    </div>
+
+  </div>
+
 
 </div>
 
