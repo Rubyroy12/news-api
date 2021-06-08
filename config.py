@@ -6,7 +6,7 @@ class Config:
     #top-headlines
     #sources
     """
-    NEWS_API_BASE_URL = 'https://newsapi.org/v2/{}?q=tesla&from=2021-05-07&sortBy=publishedAt&apiKey={}'
+    NEWS_API_BASE_URL = 'https://newsapi.org/v2/{}?q=tesla&from=2021-05-08&sortBy=publishedAt&apiKey={}'
     NEWS_API_KEY =  os.environ.get('NEWS_API_KEY')
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
