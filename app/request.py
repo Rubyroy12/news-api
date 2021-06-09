@@ -45,37 +45,3 @@ def process_results(new_list):
     # print(news_results)
     return news_results
     
-#############################################################################################
-
-# def get_source(category):
-#     """Get news"""
-#     get_source_url= base_url.format(category,api_key)
-
-#     with urllib.request.urlopen(get_source_url) as url:
-#         get_source_data=url.read()
-#         get_source_response=json.loads(get_source_data)
-
-#         source_results=None
-
-#         if get_source_response ["sources"]:
-#             source_results_list=get_source_response["sources"]
-#             source_results= process_results(source_results_list)
-
-#     return source_results
-
-# def process_results(source_list):
-#     """Process"""
-#     source_results=[]
-#     for source_items in source_list:
-#         name = source_items.get('name')
-#         description = source_items.get('description')
-#         url = source_items.get('url')
-
-       
-
-#         if name:
-#             source_object=Article(name, description, url)
-#             source_results.append(source_object)
-#     # print(news_results)
-#     return source_results
-    
